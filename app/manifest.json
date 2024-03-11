@@ -1,0 +1,62 @@
+{
+  "_version": "1.21.0",
+  "sap.app": {
+    "id": "core",
+    "type": "application",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "Northwind Data",
+    "dataSources": {
+      "default": {
+        "uri": "/odata/v4/main/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "rootView": {
+      "id": "app",
+      "viewName": "module:core/AppView",
+      "displayBlock": true,
+      "async": true
+    },
+    "dependencies": {
+      "minUI5Version": "1.96.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "": {
+        "dataSource": "default",
+        "preload": true,
+        "settings": {
+          "groupId": "$direct",
+          "autoExpandSelect": false,
+          "earlyRequests": true,
+          "operationMode": "Server",
+          "synchronizationMode": "None"
+        }
+      }
+    }
+  }
+}
