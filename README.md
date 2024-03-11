@@ -1,6 +1,6 @@
 # OData V4 Sample
 
-The repository serves as an example to illustrate that it is not possible to filter an aggregated OData property with openui5 version 1.121.0
+The repository serves as an example to illustrate that it is not possible to filter an aggregated OData property with OpenUI5 version 1.121.0
 
 ```
 npm install
